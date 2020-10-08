@@ -18,6 +18,8 @@ Future<bool> isAppInstalled(String packageName) async {
   bool isInstalled = await DeviceApps.isAppInstalled(packageName);
   if (isInstalled) {
     DeviceApps.openApp(packageName);
+    
+    print("hello");
     return true;
   } else {
     _launchURL(packageName);
